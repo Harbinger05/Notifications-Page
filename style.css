@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 100%, 100%);
+    --Navy-50: hsl(210, 60%, 98%);
+    --Blue-100: hsl(211, 68%, 94%);
+    --Navy-100: hsl(205, 33%, 90%);
+    --Gray-500: hsl(219, 14%, 63%);
+    --Gray-600: hsl(219, 12%, 42%);
+    --Navy-950: hsl(224, 21%, 14%);
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--Navy-50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 3rem 0;
+    scroll-behavior: smooth;
+}
+
+.notification-container {
+    padding: 1rem 2rem;
+    background-color: var(--White);
+    box-shadow: 0px 0px 20px var(--Blue-100);
+    border-radius: 15px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.header h2 {
+    color: var(--Navy-950);
+}
+
+.header h2 span {
+    display: inline-block;
+    background-color: var(--Blue);
+    color: var(--White);
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 9px;
+    margin-left: 0.4rem;
+}
+
+.header button {
+    color: var(--Gray-600);
+    border-style: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header button:hover {
+    transition: color 0.3s ease;
+    color: var(--Blue);
+}
+
+.unread {
+    background-color: var(--Navy-50);
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 9px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.message img {
+    display: block;
+    width: 100%;
+    max-width: 50px;
+}
+
+.message p {
+    color: var(--Gray-500);
+    font-weight: 700;
+}
+
+.message .name {
+    color: var(--Navy-950);
+    font-weight: 800;
+    cursor: pointer;
+    margin-right: 0.3rem;
+}
+
+.message .name:hover {
+    transition: color 0.3s ease;
+    color: var(--Blue);
+}
+
+.message .post {
+    color: var(--Gray-600);
+    font-weight: 800;
+    cursor: pointer;
+    margin-left: 0.3rem;;
+}
+
+.message .post:hover {
+    transition: color 0.3s ease;
+    color: var(--Blue);
+}
+
+.message .red-circle {
+    width: 9px;
+    height: 9px;
+    background-color: var(--Red);
+    border-radius: 50px;
+    flex-shrink: 0;
+}
+
+.message-content .info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.message-content .min {
+    font-weight: 500;
+    margin-top: 0.3rem;;
+}
+
+.message .chess {
+    color: var(--Blue);
+    font-weight: 800;
+    margin-left: 0.3rem;
+    cursor: pointer;
+}
+
+.message .chess:hover {
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.private-message p {
+    color: var(--Gray-500);
+    max-width: 536px;
+    border: 1px solid var(--Navy-100);
+    border-radius: 7px;
+    margin-top: 0.8rem;
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.fourth img {
+    align-self: start;
+}
+
+.fifth .chess-img {
+    margin-left: 10rem;
+}
+
+.sixth .info p {
+    max-width: 555px;
+    line-height: 1.4;
+}
+
+.sixth img {
+    align-self: start;
+}
+
+@media (max-width: 765px) {
+
+    body {
+        padding: 0;
+    }
+
+    .fifth .chess-img {
+        margin-left: 0;
+    }
+
+    .notification-container {
+        padding: 0.2rem;
+        border-radius: 0;
+    }
+
+    .header h2 {
+        color: var(--Navy-950);
+        font-size: 1.5rem;
+    }
+
+    .header button {
+        font-size: 1rem;
+    }
+}
